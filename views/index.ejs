@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktail Recipe</title>
+    <style>
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: pink;
+            padding-left: 10px;
+        }
+
+        h1 {
+            width: 50%;
+        }
+
+        img {
+            width: 50%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .instruction {
+            width: 50%;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <% if (locals.strDrink) { %>
+        <h1><%= strDrink %></h1>
+        <img src=<%= strDrinkThumb %>>
+        <p class="instruction"><%= strInstructions %></p>
+    <% } %>
+
+    <% if (locals.error) { %>
+        <p><%= error %></p>
+    <% } %>
+</body>
+</html>
